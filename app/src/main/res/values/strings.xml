@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Umbrella</string>
+    <string name="tv_today">Today</string>
+    <string name="tv_tomorrow">Tomorrow</string>
+    <string name="btn_text_save">Save</string>
+    <string-array name="units">
+        <item>Fahrenheit</item>
+        <item>Celsius</item>
+        <item>Kelvins</item>
+    </string-array>
+</resources>
