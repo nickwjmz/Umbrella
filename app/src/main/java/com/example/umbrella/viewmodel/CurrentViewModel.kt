@@ -19,7 +19,7 @@ class CurrentViewModel: ViewModel() {
 
     fun getCurrentWeather(zipCode: String, units: String) {
         val network = Network("https://api.openweathermap.org/data/2.5/")
-        network.initRetrofit().getCurrentWeather(zipCode, units)
+        network.initRetrofit().getCurrentWeather(zipCode, "ff7a53714c662908453f27ee7df7f6a2", units)
             .enqueue(object : Callback<CurrentWeather> {
                 override fun onFailure(call: Call<CurrentWeather>, t: Throwable) {
                     Log.d("FAILURE", t.toString())

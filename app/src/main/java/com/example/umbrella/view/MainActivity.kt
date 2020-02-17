@@ -101,6 +101,7 @@ class MainActivity : AppCompatActivity() {
             //here you should bind state to view
             //et_zip.setText(m_zip.value)
             weatherViewModel.getWeather(m_zip.value!!, units.value!!)
+            cardViewModel.getCurrentWeather(m_zip.value!!, units.value!!)
         })
 
         iv_settings.setOnClickListener {v ->
@@ -116,7 +117,6 @@ class MainActivity : AppCompatActivity() {
         if (requestCode == 69) {
             m_zip.value  = data?.getStringExtra("zip")
             units.value = data?.getStringExtra("units")
-
         }
     }
 }

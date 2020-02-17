@@ -2,7 +2,6 @@ package com.example.umbrella.model
 
 import retrofit2.Call
 import retrofit2.http.GET
-import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface RetrofitEndpoint {
@@ -17,6 +16,7 @@ interface RetrofitEndpoint {
     @GET("weather")
     fun getCurrentWeather(
         @Query("zip") zipCode: String,
+        @Query("appid") appKey: String,
         @Query("units") units: String
     ): Call<CurrentWeather>
 }
