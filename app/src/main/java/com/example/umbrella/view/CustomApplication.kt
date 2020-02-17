@@ -5,10 +5,10 @@ import android.content.Context
 
 class CustomApplication : Application(){
     companion object{
-        private var myCustomApplicaiton : Context? = null
+        private var myCustomApplication : Context? = null
 
         fun getApplication(): Context{
-            return myCustomApplicaiton!!
+            return myCustomApplication!!
         }
     }
 

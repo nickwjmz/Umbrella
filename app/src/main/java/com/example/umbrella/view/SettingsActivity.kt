@@ -17,21 +17,15 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
-        val Fahrenheit = "imperial"
-        val Celsius = "metric"
-        val Kelvin = null
-
         var zip: String = intent.getStringExtra("zip")
         et_zip.setText(zip)
 
         var unitsString = intent.getStringExtra("units")
         var unitsPosition = 0
-        if (unitsString == Fahrenheit) {
+        if (unitsString == "imperial") {
             unitsPosition = 0
-        } else if (unitsString == Celsius){
-            unitsPosition = 1
         } else
-            unitsPosition = 2
+            unitsPosition = 1
 
         // access the items of the list
         val unitsArray = resources.getStringArray(R.array.units)
@@ -51,7 +45,6 @@ class SettingsActivity : AppCompatActivity() {
                                             view: View, position: Int, id: Long) {
                     unitsString = unitsArray[position]
                 }
-
                 override fun onNothingSelected(parent: AdapterView<*>) {
                     // write code to perform some action
                 }
@@ -64,8 +57,7 @@ class SettingsActivity : AppCompatActivity() {
             val resultIntent = Intent();
             resultIntent.putExtra("zip", zip);
             resultIntent.putExtra("units", unitsString)
-
-            setResult(Activity.RESULT_OK, resultIntent);
+            setResult(69, resultIntent);
             finish()
         }
     }

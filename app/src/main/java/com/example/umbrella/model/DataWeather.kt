@@ -16,6 +16,7 @@ data class DataWeatherMain (
 
 data class DataWeatherWeather (
     val main: String,
+    val description: String,
     val icon: String
 )
 

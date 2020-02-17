@@ -15,6 +15,7 @@ import com.squareup.picasso.Picasso
 import org.json.JSONObject
 import java.text.DateFormat
 import java.text.SimpleDateFormat
+import java.time.DayOfWeek
 import java.util.*
 
 class CustomAdapter(val dataSet : List<DataWeather>) :
@@ -30,9 +31,7 @@ class CustomAdapter(val dataSet : List<DataWeather>) :
                 )
         )
 
-
     override fun getItemCount(): Int = dataSet.size
-
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         holder.onBind(dataSet[position])
@@ -47,7 +46,7 @@ class CustomAdapter(val dataSet : List<DataWeather>) :
             // Build icon url
             val baseUrl = "http://openweathermap.org/img/wn/"
             val endUrl = "@2x.png"
-            val iconUrl = baseUrl + data.weather[0].icon + endUrl
+            val iconUrl = baseUrl+data.weather[0].icon+endUrl
 
             val temperature = data.main.temp + "°"
 

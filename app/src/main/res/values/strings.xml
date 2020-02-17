@@ -4,8 +4,7 @@
     <string name="tv_tomorrow">Tomorrow</string>
     <string name="btn_text_save">Save</string>
     <string-array name="units">
-        <item>Fahrenheit</item>
-        <item>Celsius</item>
-        <item>Kelvins</item>
+        <item>imperial</item>
+        <item>metric</item>
     </string-array>
 </resources>
